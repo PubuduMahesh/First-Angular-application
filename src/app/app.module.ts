@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule} from '@angular/router';
 
 import { ChartsModule } from 'ng2-charts';
 
@@ -14,8 +15,10 @@ import { LineChartComponent } from './line-chart/line-chart.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    RouterModule.forRoot([
+    {path: 'line-chart', component: LineChartComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
